@@ -112,4 +112,99 @@ public class UnimodalSequenceTest {
 		}
 	}
 
+	@Test
+	public void test10() {
+		// two unimodal sequences, one longer than the other
+		// 10, 12, 11 is one sequence
+		// 11, 17, 9, 8, 7 is the other sequence (which is also longer)
+		int[] intArray = new int[] { 0, 0, 0, 0, 0, 0, 0};
+		try {
+			UnimodalSequence.getLength_longestUnimodalSequence(intArray);
+			fail("should have resulted in an exception");
+		} catch (NoUnimodalSequenceException e) {
+			// ...
+		}
+	}
+
+	@Test
+	public void test11() {
+		// two unimodal sequences, one longer than the other
+		// 10, 12, 11 is one sequence
+		// 11, 17, 9, 8, 7 is the other sequence (which is also longer)
+		int[] intArray = new int[] { 0, 0, 0, 1, 2, 4, 6};
+		try {
+			UnimodalSequence.getLength_longestUnimodalSequence(intArray);
+			fail("should have resulted in an exception");
+		} catch (NoUnimodalSequenceException e) {
+			// ...
+		}
+	}
+
+	@Test
+	public void test12() {
+		// two unimodal sequences, one longer than the other
+		// 10, 12, 11 is one sequence
+		// 11, 17, 9, 8, 7 is the other sequence (which is also longer)
+		int[] intArray = new int[] { 0, 0, 0, 1, 2, 4, 6};
+		try {
+			UnimodalSequence.getLength_longestUnimodalSequence(intArray);
+			fail("should have resulted in an exception");
+		} catch (NoUnimodalSequenceException e) {
+			// ...
+		}
+	}
+
+	@Test
+	public void test13() {
+		// two unimodal sequences, one longer than the other
+		// 10, 12, 11 is one sequence
+		// 11, 17, 9, 8, 7 is the other sequence (which is also longer)
+		int[] intArray = new int[] { 0, 0, 0, 1, 1, 4, 3};
+		try {
+			assertEquals(3, UnimodalSequence.getLength_longestUnimodalSequence(intArray));
+		} catch (NoUnimodalSequenceException e) {
+			fail("no exception expected");
+		}
+	}
+
+	@Test
+	public void test14() {
+		// two unimodal sequences, one longer than the other
+		// 10, 12, 11 is one sequence
+		// 11, 17, 9, 8, 7 is the other sequence (which is also longer)
+		int[] intArray = new int[] { 0, 0, 0, 1, 1, 1, 4, 3};
+		try {
+			assertEquals(3, UnimodalSequence.getLength_longestUnimodalSequence(intArray));
+		} catch (NoUnimodalSequenceException e) {
+			fail("no exception expected");
+		}
+	}
+
+	@Test
+	public void test15() {
+		// two unimodal sequences, one longer than the other
+		// 10, 12, 11 is one sequence
+		// 11, 17, 9, 8, 7 is the other sequence (which is also longer)
+		int[] intArray = new int[] { 0, 0, 1, 3, 2, 1, 1, 0, 1, 4, 3};
+		try {
+			assertEquals(5, UnimodalSequence.getLength_longestUnimodalSequence(intArray));
+		} catch (NoUnimodalSequenceException e) {
+			fail("no exception expected");
+		}
+	}
+
+	@Test
+	public void test16() {
+		// two unimodal sequences, one longer than the other
+		// 10, 12, 11 is one sequence
+		// 11, 17, 9, 8, 7 is the other sequence (which is also longer)
+		int[] intArray = new int[] { 0, -4, 1, 1, 1, 1};
+		try {
+			UnimodalSequence.getLength_longestUnimodalSequence(intArray);
+			fail("should have resulted in an exception");
+		} catch (NoUnimodalSequenceException e) {
+			// ...
+		}
+	}
+
 }
